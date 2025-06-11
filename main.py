@@ -13,6 +13,7 @@ class Game:
 
         self.character_spritesheet = Spritesheet('img/character.png')
         self.terrain_spritesheet = Spritesheet('img/terrain.png')
+        self.enemy_spritesheet = Spritesheet('img/enemy.png')
 
 
 
@@ -22,6 +23,8 @@ class Game:
                 Ground(self, j, i)
                 if col == "B":
                     Block(self, j, i)
+                if col == "E":
+                    Enemy(self, j, i)
                 if col == "P":
                     Player(self, j, i)
 
