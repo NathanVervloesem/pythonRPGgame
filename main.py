@@ -11,9 +11,15 @@ class Game:
         #self.font = pygame.font.Font('Arial',32)
         self.running = True
 
+        self.character_spritesheet = Spritesheet('img/character.png')
+        self.terrain_spritesheet = Spritesheet('img/terrain.png')
+
+
+
     def createTilemap(self):
         for i, row in enumerate(tilemap):
             for j, col in enumerate(row):
+                Ground(self, j, i)
                 if col == "B":
                     Block(self, j, i)
                 if col == "P":
